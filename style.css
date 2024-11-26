@@ -21,12 +21,12 @@ header .contact {
   color: whitesmoke;
   font-size: 12px;
   text-transform: lowercase;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 header .social {
   display: flex;
   gap: 8px;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 header a {
   display: flex;
@@ -57,107 +57,205 @@ main .hero {
   background-size: cover;
   height: 600px;
 }
-main nav {
+
+nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  height: 90px;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  height: 90px;
 }
-main nav h1 {
+nav h1 {
   color: rgb(134, 184, 23);
   text-transform: capitalize;
-  font-size: 40px;
-  padding-left: 50px;
+  font-size: 28px;
 }
-main nav ul, main nav li {
+nav ul {
   display: flex;
-  flex-direction: row;
-  text-transform: capitalize;
-  padding-left: 50px;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-main nav a {
+nav ul li a {
   color: white;
-  font-weight: 700px;
+  font-weight: 700;
+  text-transform: capitalize;
   transition: 0.5s;
-  font-size: 18px;
+  font-size: 20px;
 }
-main nav a:hover {
-  color: rgb(134, 184, 23);
-  transform: scale(1.3);
-}
-main nav #home {
+nav ul li a:hover {
   color: rgb(134, 184, 23);
 }
-main #button {
+nav #home {
+  color: rgb(134, 184, 23);
+}
+nav #about {
+  color: rgb(134, 184, 23);
+}
+nav #service {
+  color: rgb(134, 184, 23);
+}
+nav #packages {
+  color: rgb(134, 184, 23);
+}
+nav #destination {
+  color: rgb(134, 184, 23);
+}
+
+#button {
   background-color: rgb(134, 184, 23);
-  padding: 15px 30px;
+  padding: 10px 20px;
   border-radius: 40px;
   color: white;
   font-weight: lighter;
   border: none;
+  transition: 0.5s ease;
 }
-main #button:hover {
+#button:hover {
   background-color: rgb(89, 130, 3);
   transform: scale(1.1);
 }
-main hr {
+
+hr {
   border: none;
   height: 1px;
   background-color: #494343;
 }
-main .heading {
+
+.heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 90px;
+  padding-top: 50px;
   text-transform: capitalize;
-  /* Styling the input field */
 }
-main .heading h2 {
+.heading h1 {
   color: white;
-  font-size: 70px;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 6px;
+  padding-top: 50px;
 }
-main .heading h2 span {
+.heading h1 span {
+  color: #86B817;
+}
+.heading h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+.heading h2 span {
   color: rgb(134, 184, 23);
 }
-main .heading p {
+.heading p {
   color: white;
-  font-size: 30px;
-  padding-top: 20px;
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: center;
+  padding: 20px 0px;
 }
-main .heading .input-wrapper {
+.heading .input-wrapper {
   position: relative;
-  width: 900px;
+  width: 100%;
+  max-width: 500px;
   padding-top: 20px;
 }
-main .heading input {
+.heading .input-wrapper input {
   width: 100%;
-  padding: 10px 50px 10px 10px; /* Space for the button on the right */
+  padding: 10px 50px 10px 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 30px;
   outline: none;
   height: 50px;
 }
-main .heading button {
+.heading .input-wrapper button {
   position: absolute;
-  top: 24px;
-  right: 10px;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-25%);
   height: 60%;
   border: none;
   background-color: rgb(89, 130, 3);
   color: white;
-  font-size: 16px;
-  padding: 0px 20px;
+  font-size: 14px;
+  padding: 0 15px;
   cursor: pointer;
   border-radius: 20px;
 }
-main .heading button:hover {
+.heading .input-wrapper button:hover {
   background-color: rgb(147, 213, 6);
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+  }
+  nav h1 {
+    font-size: 24px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  #button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .hero {
+    height: 400px;
+  }
+  .heading h2 {
+    font-size: 36px;
+  }
+  .heading p {
+    font-size: 16px;
+  }
+  .input-wrapper {
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  nav {
+    align-items: center;
+    text-align: center;
+  }
+  nav h1 {
+    font-size: 20px;
+  }
+  nav ul {
+    gap: 5px;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  #button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .hero {
+    height: 300px;
+  }
+  .heading h2 {
+    font-size: 24px;
+  }
+  .heading p {
+    font-size: 14px;
+  }
+  .input-wrapper {
+    max-width: 250px;
+  }
+}
 .about {
   height: 100vh;
   display: grid;
@@ -174,7 +272,7 @@ main .heading button:hover {
 }
 .about .content h6 {
   text-transform: uppercase;
-  color: #86B817;
+  color: #86b817;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -182,30 +280,66 @@ main .heading button:hover {
   font-size: calc(1.375rem + 1.5vw);
   font-weight: bold;
   margin-top: 10px;
-  color: #2C3E50;
+  color: #2c3e50;
 }
 .about .content h1 span {
-  color: #86B817;
+  color: #86b817;
 }
 .about .content p {
   line-height: 1.4rem;
-  color: #808B8D;
+  color: #808b8d;
   margin-top: 20px;
 }
 .about .content i {
-  color: #86B817;
-  line-height: 1.9rem;
+  color: #496807;
 }
 .about .content span {
-  color: #808B8D;
+  color: #808b8d;
+  line-height: 1.5rem;
 }
 .about .content a {
   color: white;
-  background-color: #86B817;
+  background-color: #86b817;
   padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 .about .content a:hover {
   background-color: #496807;
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 20px 30px;
+    height: auto;
+  }
+  .about .img {
+    height: 300px;
+  }
+  .about .content h1 {
+    font-size: 1.8rem;
+  }
+  .about .content p {
+    font-size: 1rem;
+  }
+  .about .content a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    padding: 10px 20px;
+    height: auto;
+  }
+  .about .img {
+    height: 200px;
+  }
+  .about .content h1 {
+    font-size: 1.5rem;
+  }
+  .about .content p {
+    font-size: 0.8rem;
+  }
 }
 
 .section {
@@ -227,7 +361,6 @@ main .heading button:hover {
   margin-bottom: 20px;
 }
 .section .service-section {
-  padding: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -239,10 +372,7 @@ main .heading button:hover {
   border-radius: 8px;
   text-align: center;
   padding: 20px;
-  height: 250px;
-  width: 300px;
   transition: all 0.5s ease-in-out;
-  /* Hover effect */
 }
 .section .service-section .service-box .logo {
   margin-bottom: 15px;
@@ -259,7 +389,7 @@ main .heading button:hover {
 }
 .section .service-section .service-box .description {
   font-size: 0.9rem;
-  color: #808B8D;
+  color: #808b8d;
   line-height: 1.2;
 }
 .section .service-section .service-box:hover {
@@ -274,6 +404,46 @@ main .heading button:hover {
 }
 .section .service-section .service-box:hover .description {
   color: #fff;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 30px;
+    height: auto;
+    margin-top: 30px;
+  }
+  .section .service-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .section .service-section .service-box {
+    padding: 15px;
+  }
+  .section p {
+    font-size: 1rem;
+  }
+  .section .section-heading {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 10px 20px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .section .service-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .section .service-section .service-box {
+    height: auto;
+  }
+  .section p {
+    font-size: 0.9rem;
+  }
+  .section .section-heading {
+    font-size: 1.5rem;
+  }
 }
 
 .destination {
@@ -390,7 +560,7 @@ main .heading button:hover {
   .destination .div2,
   .destination .div3,
   .destination .div4 {
-    height: 200px; /* Adjusted for smaller screens */
+    height: 100px; /* Adjusted for smaller screens */
   }
 }
 @media (max-width: 480px) {
@@ -406,34 +576,18 @@ main .heading button:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .service-section {
-    padding: 10px;
-  }
-  .service-section .section-heading {
-    font-size: 1.5rem;
-  }
-  .service-section .service-box {
-    padding: 15px;
-  }
-  .service-section .service-box .title {
-    font-size: 1.1rem;
-  }
-  .service-section .service-box .description {
-    font-size: 0.95rem;
-  }
-}
 .holiday-packages {
+  height: 100vh;
   padding: 50px 20px;
   background-color: #f9f9f9;
-  height: 100vh;
+  height: auto; /* Ensure auto height to prevent overflow on smaller screens */
 }
 .holiday-packages P {
   text-align: center;
   color: #86B817;
   font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 20PX;
+  margin-bottom: 20px;
 }
 .holiday-packages .section-heading {
   text-align: center;
@@ -568,7 +722,7 @@ main .heading button:hover {
 .travel-guides {
   padding: 50px 20px;
   background-color: #f9f9f9;
-  height: 100vh;
+  height: auto; /* Ensure auto height to prevent overlap */
 }
 .travel-guides .section-heading {
   text-align: center;
@@ -633,27 +787,6 @@ main .heading button:hover {
 }
 .travel-guides .guides-grid .guide-box .image-container .social-icons .icon:hover {
   background-color: #ff5722;
-  color: #fff;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .facebook {
-  color: #3b5998;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .facebook:hover {
-  background-color: #3b5998;
-  color: #fff;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .twitter {
-  color: #1da1f2;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .twitter:hover {
-  background-color: #1da1f2;
-  color: #fff;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .instagram {
-  color: #e4405f;
-}
-.travel-guides .guides-grid .guide-box .image-container .social-icons .instagram:hover {
-  background-color: #e4405f;
   color: #fff;
 }
 .travel-guides .guides-grid .guide-box .guide-name {
