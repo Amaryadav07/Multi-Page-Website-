@@ -215,7 +215,7 @@ hr {
   }
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -488,7 +488,7 @@ hr {
   @media (max-width: 768px) {
     padding: 20px 30px;
     height: auto;
-    margin-top: 30px; // Space between About and Service sections
+    margin-top: 30px; 
 
     .service-section {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -511,7 +511,7 @@ hr {
   @media (max-width: 480px) {
     padding: 10px 20px;
     height: auto;
-    margin-top: 20px; // Additional space for smaller screens
+    margin-top: 20px; 
 
     .service-section {
       grid-template-columns: 1fr;
@@ -568,10 +568,10 @@ hr {
           .div3,
           .div4 {
             position: relative;
-            background-size: 100%; /* Default size */
+            background-size: 100%; 
             background-position: center center;
             background-repeat: no-repeat;
-            transition: background-size 0.3s ease-in-out; /* Smooth zoom effect */
+            transition: background-size 0.3s ease-in-out; 
             overflow: hidden;
           }
       
@@ -595,62 +595,8 @@ hr {
             grid-area: 3 / 3 / 6 / 5;
             background-image: url(/img/destination-3.jpg);
           }
-      
-          /* Zoom effect on hover */
-          .div1:hover,
-          .div2:hover,
-          .div3:hover,
-          .div4:hover {
-            background-size: 110%; /* Zoom in effect */
-          }
-      
-          /* Overlay styles */
-          .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            color: #fff;
-          }
-      
-          .overlay p {
-            font-size: 1.5rem;
-            margin: 10px 0;
-          }
-      
-          .overlay button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #ff5722;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-      
-          .overlay button:hover {
-            background-color: #e64a19;
-          }
-      
-          /* Show overlay on hover */
-          .div1:hover .overlay,
-          .div2:hover .overlay,
-          .div3:hover .overlay,
-          .div4:hover .overlay {
-            opacity: 1;
-          }
         }
       
-        /* Media queries for responsiveness */
         @media (max-width: 768px) {
           .parent {
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -662,7 +608,7 @@ hr {
           .div2,
           .div3,
           .div4 {
-            height: 100px; /* Adjusted for smaller screens */
+            height: 100px; 
           }
         }
       
@@ -689,7 +635,7 @@ hr {
         height: 100vh;
         padding: 50px 20px;
         background-color: #f9f9f9;
-        height: auto; /* Ensure auto height to prevent overflow on smaller screens */
+        height: auto; 
         
         P {
           text-align: center;
@@ -795,7 +741,7 @@ hr {
           }
         }
       
-        // Media Queries for Responsiveness
+       
         @media (max-width: 768px) {
           .section-heading {
             font-size: 1.8rem;
@@ -837,7 +783,7 @@ hr {
           }
       
           .packages-grid {
-            grid-template-columns: 1fr; // Single column layout
+            grid-template-columns: 1fr; 
       
             .package-box {
               .package-image {
@@ -872,7 +818,7 @@ hr {
        
         padding: 50px 20px;
         background-color: #f9f9f9;
-        height: auto; /* Ensure auto height to prevent overlap */
+        height: auto; 
         
         .section-heading {
           text-align: center;
@@ -961,7 +907,7 @@ hr {
           }
         }
       
-        // Media Queries for Responsiveness
+        
         @media (max-width: 768px) {
           .section-heading {
             font-size: 1.8rem;
@@ -1104,7 +1050,7 @@ hr {
           }
         }
       
-        // Media Queries for Responsiveness
+       
         @media (max-width: 768px) {
           .footer-content {
             grid-template-columns: 1fr;
